@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amin's Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <style>
+    /* Global resets */
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+    /* Brick wall background using repeating linear gradients */
+    body {
+      background-color: #b22222; /* brick red base */
+      background-image: 
+        linear-gradient(90deg, #a52a2a 25%, transparent 25%), 
+        linear-gradient(90deg, #a52a2a 25%, transparent 25%), 
+        linear-gradient(0deg, #a52a2a 25%, transparent 25%), 
+        linear-gradient(0deg, #a52a2a 25%, transparent 25%);
+      background-size: 60px 60px;
+      background-position: 0 0, 30px 30px, 0 0, 30px 30px;
+    }
+    /* Container for the construction site scene */
+    .construction-site {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    /* Simple crane element (CSS-only) */
+    .crane {
+      position: absolute;
+      top: 10%;
+      right: 5%;
+      width: 150px;
+      height: 200px;
+    }
+    .crane .arm {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      width: 120px;
+      height: 10px;
+      background: #444;
+      transform: translateX(-50%);
+    }
+    .crane .hook {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      width: 2px;
+      height: 50px;
+      background: #444;
+      transform: translateX(-50%);
+    }
+    .crane .base {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 10px;
+      height: 100px;
+      background: #444;
+      transform: translateX(-50%);
+    }
+    /* Overlay container for the content */
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80%;
+      max-width: 600px;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px 40px;
+      border: 3px solid #00ff26;
+      border-radius: 8px;
+      text-align: center;
+      color: #00ff26;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0 0 20px;
+    }
+    main p {
+      font-size: 1.2rem;
+      margin: 0 0 20px;
+    }
+    footer p {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+    #fullscreen {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+        border: none; /* Optional: Removes border around iframe */
+    }
+  </style>
+</head>
+<body>
+  <div class="construction-site">
+    <!-- Crane element simulating construction equipment -->
+    <!--<div class="crane">
+      <div class="arm"></div>
+      <div class="hook"></div>
+      <div class="base"></div>
+    </div>-->
+    <iframe src="/playableGames/pong-game/index.html", id="fullscreen"></iframe>
+    <!-- Content overlay with under-construction message -->
+    <div class="content">
+      <header>
+        <h1>Under Construction!</h1>
+      </header>
+      <main>
+        <p>This webpage is currently under construction. Our team is busy laying down the bricks and setting up scaffolding to build something amazing. Check back soon!</p>
+      </main>
+      <footer>
+        <p>Caution: Building in Progress</p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
